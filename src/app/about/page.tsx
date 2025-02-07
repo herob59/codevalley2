@@ -33,7 +33,7 @@ export default function About() {
         {/* Team Section */}
         <section className="mt-10">
           <h2 className="text-2xl font-bold text-center">Our Team</h2>
-          <div className="flex grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 justify-center">
+          <div className=" grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 mt-4 justify-center">
             {/* Team Member Cards */}
             {[1, 2, 3, 4].map((id) => (
               <div key={id} className="text-center bg-gray-100 p-4 rounded-lg">
