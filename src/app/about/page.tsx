@@ -5,19 +5,19 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <div>
-      <Header /> {/* Reusing the Header Component */}
+    <>
+      <Header /> 
 
-      <main className=" mx-auto mt-5 p-4">
-        {/* Hero Section */}
+     
+        
         <section
       className="relative bg-cover bg-center h-[900px] flex items-center"
       style={{ backgroundImage: "url('/assets/clock face.jpg')" }}
     >
-      {/* Overlay for better text visibility */}
+     
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      {/* Content */}
+      
       <div className="relative z-10 max-w-2xl text-white px-8 md:px-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Story</h1>
         <p className="text-lg md:text-xl">
@@ -29,28 +29,85 @@ export default function About() {
       </div>
     </section>
 
+    <div className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white p-6">
+  <div className="max-w-7xl mx-auto">
+  
+    <div className="text-center mb-10">
+      <h1 className="text-3xl font-bold">Meet Our Team</h1>
+      <p className="text-gray-600 dark:text-gray-400">Our dedicated team of professionals is here to help you succeed.</p>
+    </div>
 
-        {/* Team Section */}
-        <section className="mt-10">
-          <h2 className="text-2xl font-bold text-center">Our Team</h2>
-          <div className=" grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 mt-4 justify-center">
-            {/* Team Member Cards */}
-            {[1, 2, 3, 4].map((id) => (
-              <div key={id} className="text-center bg-gray-100 p-4 rounded-lg">
-                <img src={`/assets/team1.jpg`} alt={`Team Member ${id}`} className="w-32 h-36 mx-auto  rounded-full" />
-                <h3 className="mt-2 font-semibold">John Doe</h3>
-                <p className="text-gray-600">Software Engineer</p>
-                <p className="text-sm mt-1">Expert in building scalable web applications.</p>
-              </div>
-            ))}
+   
+    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
+    
+      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+        <img src="/assets/team1.jpg" alt="Team Member 1" className="w-full h-50 object-fit" />
+        <div className="p-6">
+          <h2 className="text-xl font-semibold">Eboge Henry</h2>
+          <p className="text-gray-600 dark:text-gray-400">Full-Stack Developer</p>
+          <div className="flex items-center mt-4 space-x-3">
+            <a href="#" className="text-blue-500 hover:text-blue-600">[Facebook]</a>
+            <a href="#" className="text-blue-400 hover:text-blue-500">[Twitter]</a>
+            <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-gray-900">[Portfolio]</a>
           </div>
-        </section>
+        </div>
+      </div>
+
+      
+      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+        <img src="/assets/team1.jpg" alt="Team Member 2" className="w-full h-50 object-fit" />
+        <div className="p-6">
+          <h2 className="text-xl font-semibold">Jane Smith</h2>
+          <p className="text-gray-600 dark:text-gray-400">UI/UX Designer</p>
+          <div className="flex items-center mt-4 space-x-3">
+            <a href="#" className="text-blue-500 hover:text-blue-600">[Facebook]</a>
+            <a href="#" className="text-blue-400 hover:text-blue-500">[Twitter]</a>
+            <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-gray-900">[Portfolio]</a>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white dark:bg-gray-800 shadow-lg   rounded-lg overflow-hidden">
+        <img src="/assets/team1.jpg" alt="Team Member 3" className="w-full h-50 object-fit" />
+        <div className="p-6">
+          <h2 className="text-xl font-semibold">Alex Johnson</h2>
+          <p className="text-gray-600 dark:text-gray-400">Project Manager</p>
+          <div className="flex items-center mt-4 space-x-3">
+            <a href="#" className="text-blue-500 hover:text-blue-600">[Facebook]</a>
+            <a href="#" className="text-blue-400 hover:text-blue-500">[Twitter]</a>
+            <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-gray-900">[Portfolio]</a>
+          </div>
+        </div>
+      </div>
+    
+<div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
+        <img src="/assets/team1.jpg" alt="Team Member 3" className="w-full h-50 object-fit " />
+        <div className="p-6">
+          <h2 className="text-xl font-semibold">Alex Johnson</h2>
+          <p className="text-gray-600 dark:text-gray-400">Project Manager</p>
+          <div className="flex items-center mt-4 space-x-3">
+            <a href="#" className="text-blue-500 hover:text-blue-600">[Facebook]</a>
+            <a href="#" className="text-blue-400 hover:text-blue-500">[Twitter]</a>
+            <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-gray-900">[Portfolio]</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+   
+  </div>
+  < Footer />
+</>
+
+
+       
 
         
-      </main>
+   
 
-      {/* Footer */}
-     < Footer />
-    </div>
+     
+     
+   
   );
 }
