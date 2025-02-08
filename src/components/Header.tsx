@@ -1,13 +1,16 @@
 'use client'
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X, Search, ChevronDown, ChevronRight } from "lucide-react";
 
 
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [industriesOpen, setIndustriesOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+
   return (
     <header className="fixed top-0 w-full bg-gray-800 text-white shadow-md z-50">
     <div className="container mx-auto flex justify-between items-center p-4">
@@ -27,22 +30,103 @@ export default function Header() {
           </li>
          
           <li>
-            <Link href="/product" className="hover:text-gray-400">Product</Link>
+            <Link href="/products" className="hover:text-gray-400">Products</Link>
           </li>
-          <li
-            className="relative"
-            onMouseEnter={() => setTimeout(() => setDropdownOpen(true), 300)}
-            onMouseLeave={() => setTimeout(() => setDropdownOpen(false), 300)}
-          >
-            <button className="hover:text-gray-400">Service</button>
-            {dropdownOpen && (
-              <div className="absolute left-0 mt-2 w-48 bg-gray-700 shadow-lg rounded-md">
-                <Link href="/custom_software" className="block px-4 py-2 hover:bg-gray-600">Custom Software</Link>
-                <Link href="/team" className="block px-4 py-2 hover:bg-gray-600">Team</Link>
-                <Link href="/mission" className="block px-4 py-2 hover:bg-gray-600">Mission</Link>
-              </div>
-            )}
+
+
+         {/* Services Dropdown */}
+         <li className="relative group">
+            <button
+              onClick={() => setServicesOpen(!servicesOpen)}
+              className="flex items-center gap-2 hover:text-blue-400 transition"
+            >
+              Services <ChevronDown size={16} />
+            </button>
+
+            {/* Services Dropdown Menu */}
+            <ul
+              className={`absolute left-0 top-full w-52 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
+                servicesOpen ? "opacity-100 visible" : "opacity-0 invisible"
+              }`}
+              onMouseEnter={() => setServicesOpen(true)}
+              onMouseLeave={() => setServicesOpen(false)}
+            >
+              {/* Industries Dropdown */}
+              <li className="relative group">
+                <button
+                  onClick={() => setIndustriesOpen(!industriesOpen)}
+                  className="flex justify-between w-full px-4 py-2 hover:bg-gray-700 rounded"
+                >
+                  Industries <ChevronRight size={16} />
+                </button>
+
+                {/* Industries Submenu */}
+                <ul
+                  className={`absolute left-full top-0 w-56 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
+                    industriesOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                  }`}
+                >
+                  {[
+                    "Fintech",
+                    "Health Care & Wellbeing",
+                    "Construction",
+                    "Logistic & Transportation",
+                    "Automotive",
+                    "Travel & Hospitality",
+                    "EdTech",
+                    "Insurance & Mortgage",
+                  ].map((industry) => (
+                    <li key={industry}>
+                      <Link
+                        href="/services"
+                        className="block px-4 py-2 hover:bg-gray-700 rounded"
+                      >
+                        {industry}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+
+              {/* Services & Solutions Dropdown */}
+              <li className="relative group">
+                <button
+                  onClick={() => setSolutionsOpen(!solutionsOpen)}
+                  className="flex justify-between w-full px-4 py-2 hover:bg-gray-700 rounded"
+                >
+                  Services & Solutions <ChevronRight size={16} />
+                </button>
+
+                {/* Services & Solutions Submenu */}
+                <ul
+                  className={`absolute left-full top-0 w-64 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
+                    solutionsOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                  }`}
+                >
+                  {[
+                    "Enterprise Software Solution",
+                    "Mobile App Development",
+                    "Dedicated Teams",
+                    "Design",
+                    "Data Engineering",
+                    "QA Testing",
+                    "Product Development & Consulting",
+                  ].map((service) => (
+                    <li key={service}>
+                      <Link
+                        href="/services"
+                        className="block px-4 py-2 hover:bg-gray-700 rounded"
+                      >
+                        {service}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            </ul>
           </li>
+         
+         
           <li>
             <Link href="/contact" className="hover:text-gray-400">Contact</Link>
           </li>
@@ -88,10 +172,10 @@ export default function Header() {
             <Link href="/about" className="block text-white">About</Link>
           </li>
           <li className="py-2 border-b border-gray-700">
-            <Link href="/product" className="block text-white">Product</Link>
+            <Link href="/products" className="block text-white">Products</Link>
           </li>
           <li className="py-2 border-b border-gray-700">
-            <Link href="/service" className="block text-white">Service</Link>
+            <Link href="/services" className="block text-white">Services</Link>
           </li>
           <li className="py-2 border-b border-gray-700">
             <Link href="/contact" className="block text-white">Contact</Link>

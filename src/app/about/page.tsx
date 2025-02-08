@@ -11,21 +11,21 @@ export default function About() {
      
         
         <section
-      className="relative bg-cover bg-center h-[900px] flex items-center"
-      style={{ backgroundImage: "url('/assets/clock face.jpg')" }}
-    >
-     
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+            className="relative bg-cover bg-center h-[900px] flex items-center"
+            style={{ backgroundImage: "url('/assets/clock face.jpg')" }}
+          >
+          
+            <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       
-      <div className="relative z-10 max-w-2xl text-white px-8 md:px-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Story</h1>
-        <p className="text-lg md:text-xl">
-          We are a digital transformation consultancy and engineering company that delivers
-          cutting-edge solutions for global organizations and technology startups. Since 2020, we
-          have been helping companies and established brands reimagine their business through
-          digitalization.
-        </p>
+            <div className="relative z-10 max-w-2xl text-white px-8 md:px-16">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Story</h1>
+              <p className="text-lg md:text-xl">
+                We are a digital transformation consultancy and engineering company that delivers
+                cutting-edge solutions for global organizations and technology startups. Since 2020, we
+                have been helping companies and established brands reimagine their business through
+                digitalization.
+              </p>
       </div>
     </section>
 
