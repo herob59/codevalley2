@@ -12,6 +12,7 @@ export default function Header() {
   const [solutionsOpen, setSolutionsOpen] = useState(false);
 
   return (
+    <>
     <header className="fixed top-0 w-full bg-gray-800 text-white shadow-md z-50">
     <div className="container mx-auto flex justify-between items-center p-4">
       {/* Logo */}
@@ -38,7 +39,7 @@ export default function Header() {
          <li className="relative group">
             <button
               onClick={() => setServicesOpen(!servicesOpen)}
-              className="flex items-center gap-2 hover:text-blue-400 transition"
+              className="flex items-center gap-2 hover:text-blue-400 transition all out ease-out "
             >
               Services <ChevronDown size={16} />
             </button>
@@ -99,7 +100,7 @@ export default function Header() {
 
                 {/* Services & Solutions Submenu */}
                 <ul
-                  className={`absolute left-full top-0 w-64 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
+                  className={`absolute left-full top-0 w-64 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ease-in${
                     solutionsOpen ? "opacity-100 visible" : "opacity-0 invisible"
                   }`}
                 >
@@ -174,9 +175,13 @@ export default function Header() {
           <li className="py-2 border-b border-gray-700">
             <Link href="/products" className="block text-white">Products</Link>
           </li>
-          <li className="py-2 border-b border-gray-700">
-            <Link href="/services" className="block text-white">Services</Link>
+          <li className="py-2 border-b border-gray-700 ">
+            <Link href="/services" className=" text-white flex ">
+               Services <ChevronDown size={16} className=" h-7"/>
+            </Link>
           </li>
+         
+          
           <li className="py-2 border-b border-gray-700">
             <Link href="/contact" className="block text-white">Contact</Link>
           </li>
@@ -184,5 +189,6 @@ export default function Header() {
       </nav>
     </div>
   </header>
+  </>
   );
 }

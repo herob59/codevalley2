@@ -4,6 +4,32 @@ import Link from "next/link";
 
 
 export default function About() {
+  const teams = [
+    {
+      id : 1,
+      "name": "Eboge Henry Binakeyi",
+      "title": "CEO/Full Stake Developer",
+      "description": "Expert in building scalable web applications."
+    },
+    {
+      id : 2,
+      "name": "Eboge Henry Binakeyi",
+      "title": "CEO/Full Stake Developer",
+      "description": "Expert in building scalable web applications."
+    },
+    {
+      id : 3,
+      "name": "Eboge Henry Binakeyi",
+      "title": "CEO/Full Stake Developer",
+      "description": "Expert in building scalable web applications."
+    },
+    {
+      id : 4,
+      "name": "Eboge Henry Binakeyi",
+      "title": "CEO/Full Stake Developer",
+      "description": "Expert in building scalable web applications."
+    },
+  ]
   return (
     <>
       <Header /> 
@@ -38,61 +64,21 @@ export default function About() {
     </div>
 
    
-    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
-    
-      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
-        <img src="/assets/team1.jpg" alt="Team Member 1" className="w-full h-50 object-fit" />
-        <div className="p-6">
-          <h2 className="text-xl font-semibold">Eboge Henry</h2>
-          <p className="text-gray-600 dark:text-gray-400">Full-Stack Developer</p>
-          <div className="flex items-center mt-4 space-x-3">
-            <a href="#" className="text-blue-500 hover:text-blue-600">[Facebook]</a>
-            <a href="#" className="text-blue-400 hover:text-blue-500">[Twitter]</a>
-            <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-gray-900">[Portfolio]</a>
+  {/* Team Section */}
+  <section className="mt-10">
+          <h2 className="text-2xl font-bold text-center">Our Team</h2>
+          <div className=" grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 mt-4 justify-center">
+            {/* Team Member Cards */}
+            {teams.map((team) => (
+              <div key={team.id} className="text-center bg-gray-100 p-4 rounded-lg">
+                <img src={`/assets/team1.jpg`} alt={`Team Member ${team.id}`} className="w-32 h-36 mx-auto  rounded-full" />
+                <h3 className="mt-2 font-semibold">{team.name}</h3>
+                <p className="text-gray-600">{team.title}</p>
+                <p className="text-sm mt-1">{team.description}.</p>
+              </div>
+            ))}
           </div>
-        </div>
-      </div>
-
-      
-      <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
-        <img src="/assets/team1.jpg" alt="Team Member 2" className="w-full h-50 object-fit" />
-        <div className="p-6">
-          <h2 className="text-xl font-semibold">Jane Smith</h2>
-          <p className="text-gray-600 dark:text-gray-400">UI/UX Designer</p>
-          <div className="flex items-center mt-4 space-x-3">
-            <a href="#" className="text-blue-500 hover:text-blue-600">[Facebook]</a>
-            <a href="#" className="text-blue-400 hover:text-blue-500">[Twitter]</a>
-            <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-gray-900">[Portfolio]</a>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-white dark:bg-gray-800 shadow-lg   rounded-lg overflow-hidden">
-        <img src="/assets/team1.jpg" alt="Team Member 3" className="w-full h-50 object-fit" />
-        <div className="p-6">
-          <h2 className="text-xl font-semibold">Alex Johnson</h2>
-          <p className="text-gray-600 dark:text-gray-400">Project Manager</p>
-          <div className="flex items-center mt-4 space-x-3">
-            <a href="#" className="text-blue-500 hover:text-blue-600">[Facebook]</a>
-            <a href="#" className="text-blue-400 hover:text-blue-500">[Twitter]</a>
-            <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-gray-900">[Portfolio]</a>
-          </div>
-        </div>
-      </div>
-    
-<div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden">
-        <img src="/assets/team1.jpg" alt="Team Member 3" className="w-full h-50 object-fit " />
-        <div className="p-6">
-          <h2 className="text-xl font-semibold">Alex Johnson</h2>
-          <p className="text-gray-600 dark:text-gray-400">Project Manager</p>
-          <div className="flex items-center mt-4 space-x-3">
-            <a href="#" className="text-blue-500 hover:text-blue-600">[Facebook]</a>
-            <a href="#" className="text-blue-400 hover:text-blue-500">[Twitter]</a>
-            <a href="#" className="text-gray-600 dark:text-gray-300 hover:text-gray-900">[Portfolio]</a>
-          </div>
-        </div>
-      </div>
-    </div>
+        </section>
     </div>
   
    
