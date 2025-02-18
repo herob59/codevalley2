@@ -50,9 +50,10 @@ export default function Services() {
                       </p>
                       </div>
                       </section>
-                      <section className="bg-white shadow-lg rounded-2xl p-8 mx-auto mt-10 w-full">
+                      
+                      <section className="bg-white shadow-lg rounded-2xl p-2 mx-auto mt-10 w-full">
                       {/* Section Heading */}
-                      <h2 className="text-3xl font-bold text-center text-gray-800 border-b-4 border-blue-500 inline-block pb-2 mb-10">
+                      <h2 className="text-2xl font-bold text-center text-gray-800 border-b-4 border-blue-500 inline-block pb-2 mb-10">
                         Industries
                       </h2>
 
@@ -69,9 +70,9 @@ export default function Services() {
                       </ul>
                     </section>
 
-                  <section className="bg-white shadow-lg rounded-2xl p-8  mx-auto mt-10 w-full">
+                  <section className="bg-white shadow-lg rounded-2xl   mx-auto mt-10 w-full">
                     {/* Heading */}
-                    <h2 className="text-3xl font-bold text-center text-gray-800 border-b-4 border-blue-500 inline-block pb-2">
+                    <h2 className="text-2xl font-bold text-center text-gray-800 border-b-4 border-blue-500 inline-block pb-2">
                       Services & Solutions
                     </h2>
 

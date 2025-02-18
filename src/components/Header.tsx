@@ -56,7 +56,7 @@ export default function Header() {
               <li className="relative group">
                 <button
                   onClick={() => setIndustriesOpen(!industriesOpen)}
-                  className="flex justify-between w-full px-4 py-2 hover:bg-gray-700 rounded"
+                  className="flex justify-between w-full px-2 py-2 hover:bg-gray-700 rounded"
                 >
                   Industries <ChevronRight size={16} />
                 </button>
@@ -93,7 +93,7 @@ export default function Header() {
               <li className="relative group">
                 <button
                   onClick={() => setSolutionsOpen(!solutionsOpen)}
-                  className="flex justify-between w-full px-4 py-2 hover:bg-gray-700 rounded"
+                  className="flex justify-between w-full px-2 py-2 hover:bg-gray-700 rounded"
                 >
                   Services & Solutions <ChevronRight size={16} />
                 </button>

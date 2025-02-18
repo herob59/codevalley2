@@ -16,7 +16,7 @@ import {
     ];
      
        return (
-         <div className="relative w-full min-h-screen bg-gray-600 text-white py-16 px-6 flex flex-col items-center justify-center">
+         <div className="relative w-full min-h-screen bg-gray-600 text-white py-16 px-4 flex flex-col items-center justify-center">
            
            {/* Heading and Paragraph Section */}
            <div className="w-full max-w-4xl text-center mb-12">
