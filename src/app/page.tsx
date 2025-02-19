@@ -6,13 +6,15 @@ import HeroSection from "@/components/HeroSection";
 import ServiceSection from "@/components/ServiceSection";
 import Category from "@/sections/Category";
 import  './globals.css'
+import ProductSlider from "@/components/ProductSlider";
 
 export default function Home() {
   return (
     <main>
 
      <Header /> 
-       <HeroSection/>     
+       <HeroSection/>
+       <ProductSlider />     
        <Category />
        <ServiceSection />
         <CounterSection /> 
