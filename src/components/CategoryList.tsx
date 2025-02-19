@@ -28,11 +28,12 @@ export default function CategoryList() {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
       {products.map((product) => (
         <div key={product.id} className="border p-4 rounded-lg shadow-lg">
+          
           <Image 
               src={product.image}
                alt={product.name} 
-               width={500} 
-               height={300} 
+               width={300} 
+               height={200} 
                className="object-fit rounded" 
                />
           <h2 className="text-xl font-semibold mt-2">{product.name}</h2>

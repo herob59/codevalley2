@@ -10,6 +10,15 @@ export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [industriesOpen, setIndustriesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
+  const [laptopsOpen, setLaptopsOpen] = useState(false);
+  const [desktopsOpen, setDesktopsOpen] = useState(false);
+  const [accessoriesOpen, setAccessoriesOpen] = useState(false);
+  const [printersOpen, setPrintersOpen] = useState(false);
+  const [networkingOpen, setNetworkingOpen] = useState(false);
+  const [projectorsOpen, setProjectorsOpen] = useState(false);
+  const [gamingOpen, setGamingOpen] = useState(false);
+  const [softwaresOpen, setSoftwaresOpen] = useState(false);
 
   return (
     <>
@@ -30,8 +39,291 @@ export default function Header() {
             <Link href="/about" className="hover:text-gray-400">About</Link>
           </li>
          
-          <li>
-            <Link href="/products" className="hover:text-gray-400">Products</Link>
+           {/* Products Dropdown */}
+         <li className="relative group">
+            <button
+              onClick={() => setProductsOpen(!productsOpen)}
+              className="flex items-center gap-2 hover:text-blue-400 transition all out ease-out "
+            >
+              Products <ChevronDown size={16} />
+            </button>
+
+            {/* Products Dropdown Menu */}
+            <ul
+              className={`absolute left-0 top-full  w-64 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
+                productsOpen ? "opacity-100 visible" : "opacity-0 invisible"
+              }`}
+              onMouseEnter={() => setProductsOpen(true)}
+              onMouseLeave={() => setProductsOpen(false)}
+            >
+              {/* Laptops Dropdown */}
+              <li className="relative group">
+                <button
+                  onClick={() => setLaptopsOpen(!laptopsOpen)}
+                  className="flex justify-between w-full px-2 py-2 hover:bg-gray-700 rounded"
+                >
+                  Laptops <ChevronRight size={16} />
+                </button>
+
+                {/* Laptops Submenu */}
+                <ul
+                  className={`absolute left-full top-0 w-64 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
+                    laptopsOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                  }`}
+                >
+                  {[
+                    "Mini laptops & Netbooks",
+                    "Notebooks",
+                    "Ultrabooks",
+                    "Hybrid PCs",
+                    "Macbooks",
+                  ].map((industry) => (
+                    <li key={industry}>
+                      <Link
+                        href="/products"
+                        className="block px-4 py-2 hover:bg-gray-700 rounded"
+                      >
+                        {industry}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+
+              {/* Desktops and Monitors Dropdown */}
+              <li className="relative group">
+                <button
+                  onClick={() => setDesktopsOpen(!desktopsOpen)}
+                  className="flex justify-between w-full px-2 py-2 hover:bg-gray-700 rounded"
+                >
+                  Desktops & Monitors  <ChevronRight size={16} />
+                </button>
+
+                {/* Desktops and Monitors Submenu */}
+                <ul
+                  className={`absolute left-full top-0 w-64 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ease-in${
+                    desktopsOpen? "opacity-100 visible" : "opacity-0 invisible"
+                  }`}
+                >
+                  {[
+                    "CPUs",
+                    "All in Ones",
+                    "Monitors",
+                    "Servers",
+                  ].map((service) => (
+                    <li key={service}>
+                      <Link
+                        href="/products"
+                        className="block px-4 py-2 hover:bg-gray-700 rounded"
+                      >
+                        {service}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+
+              {/* Computing Accessories Dropdown */}
+              <li className="relative group">
+                <button
+                  onClick={() => setAccessoriesOpen(!accessoriesOpen)}
+                  className="flex justify-between w-full px-2 py-2 hover:bg-gray-700 rounded"
+                >
+                  Accessories <ChevronRight size={16} />
+                </button>
+
+                {/* Computing Accessories Submenu */}
+                <ul
+                  className={`absolute left-full top-0 w-56 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
+                    accessoriesOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                  }`}
+                >
+                  {[
+                    "Computer Peripherals",
+                    "Bags & Cases",
+                    "Laptop & Destop Accessories",
+                    "Storage Device",
+                    "Macbooks",
+                  ].map((industry) => (
+                    <li key={industry}>
+                      <Link
+                        href="/products"
+                        className="block px-4 py-2 hover:bg-gray-700 rounded"
+                      >
+                        {industry}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+
+               {/* Printers, Scanners & Accessories Dropdown */}
+               <li className="relative group">
+                <button
+                  onClick={() => setPrintersOpen(!printersOpen)}
+                  className="flex justify-between w-full px-2 py-2 hover:bg-gray-700 rounded"
+                >
+                  Printers & Scanners <ChevronRight size={16} />
+                </button>
+
+                {/* Printers, Scanners & Accessories Submenu */}
+                <ul
+                  className={`absolute left-full top-0 w-56 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
+                    printersOpen? "opacity-100 visible" : "opacity-0 invisible"
+                  }`}
+                >
+                  {[
+                    "Computer Printers & Copiers",
+                    "Scanners",
+                    "Ink, Toners & Cartridges" 
+                  ].map((industry) => (
+                    <li key={industry}>
+                      <Link
+                        href="/products"
+                        className="block px-4 py-2 hover:bg-gray-700 rounded"
+                      >
+                        {industry}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+
+                 {/* Wifi & Networking Dropdown */}
+               <li className="relative group">
+                <button
+                  onClick={() => setNetworkingOpen(!networkingOpen)}
+                  className="flex justify-between w-full px-2 py-2 hover:bg-gray-700 rounded"
+                >
+                  Wifi & Networking <ChevronRight size={16} />
+                </button>
+
+                {/* Wifi & Networking Submenu */}
+                <ul
+                  className={`absolute left-full top-0 w-56 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
+                    networkingOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                  }`}
+                >
+                  {[
+                    "Starlink",
+                    "Switches",
+                    "Router" ,
+                    "Mifi" ,
+                    "Networking Peripherals" 
+                  ].map((industry) => (
+                    <li key={industry}>
+                      <Link
+                        href="/products"
+                        className="block px-4 py-2 hover:bg-gray-700 rounded"
+                      >
+                        {industry}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>  
+
+                 {/*  Projectors & Accessories Dropdown */}
+                 <li className="relative group">
+                <button
+                  onClick={() =>  setProjectorsOpen(!projectorsOpen)}
+                  className="flex justify-between w-full px-2 py-2 hover:bg-gray-700 rounded"
+                >
+                  Projectors & Accessories <ChevronRight size={16} />
+                </button>
+
+                {/* Projectors & Accessories Submenu */}
+                <ul
+                  className={`absolute left-full top-0 w-56 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
+                    projectorsOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                  }`}
+                >
+                  {[
+                    "Video Projectors",
+                    "Projector Lamps",
+                    "Projector Lenses" ,
+                    "Mounting Equipment",
+                    "Projection Screens",
+                    "Projector bags & cases",
+                    "Remote Controls",
+                    "Other Projector Accessories"
+                  ].map((industry) => (
+                    <li key={industry}>
+                      <Link
+                        href="/products"
+                        className="block px-4 py-2 hover:bg-gray-700 rounded"
+                      >
+                        {industry}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+
+                 {/* PC Gaming Dropdown */}
+               <li className="relative group">
+                <button
+                  onClick={() => setGamingOpen(!gamingOpen)}
+                  className="flex justify-between w-full px-2 py-2 hover:bg-gray-700 rounded"
+                >
+                  PC Gaming <ChevronRight size={16} />
+                </button>
+
+                {/* PC Gaming Submenu */}
+                <ul
+                  className={`absolute left-full top-0 w-56 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
+                    gamingOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                  }`}
+                >
+                  {[
+                    "PC Games",
+                    "PC Gaming Accessories",
+                  ].map((industry) => (
+                    <li key={industry}>
+                      <Link
+                        href="/products"
+                        className="block px-4 py-2 hover:bg-gray-700 rounded"
+                      >
+                        {industry}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+                
+                 {/*  Computer Softwares Dropdown */}
+                 <li className="relative group">
+                <button
+                  onClick={() =>  setSoftwaresOpen(!softwaresOpen)}
+                  className="flex justify-between w-full px-2 py-2 hover:bg-gray-700 rounded"
+                >
+                  Computer Softwares <ChevronRight size={16} />
+                </button>
+
+                {/*  Computer Softwares Submenu */}
+                <ul
+                  className={`absolute left-full top-0 w-56 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
+                    softwaresOpen ? "opacity-100 visible" : "opacity-0 invisible"
+                  }`}
+                >
+                  {[
+                    "Operating Systems",
+                    "Office & Business",
+                    "Security & Utilities" 
+                  ].map((industry) => (
+                    <li key={industry}>
+                      <Link
+                        href="/products"
+                        className="block px-4 py-2 hover:bg-gray-700 rounded"
+                      >
+                        {industry}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+
+            </ul>
           </li>
 
 
@@ -46,7 +338,7 @@ export default function Header() {
 
             {/* Services Dropdown Menu */}
             <ul
-              className={`absolute left-0 top-full w-52 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
+              className={`absolute left-0 top-full w-64 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
                 servicesOpen ? "opacity-100 visible" : "opacity-0 invisible"
               }`}
               onMouseEnter={() => setServicesOpen(true)}
@@ -57,13 +349,15 @@ export default function Header() {
                 <button
                   onClick={() => setIndustriesOpen(!industriesOpen)}
                   className="flex justify-between w-full px-2 py-2 hover:bg-gray-700 rounded"
-                >
+
+                 
+               >
                   Industries <ChevronRight size={16} />
                 </button>
 
                 {/* Industries Submenu */}
                 <ul
-                  className={`absolute left-full top-0 w-56 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
+                  className={`absolute left-full top-0 w-64 bg-gray-900 shadow-lg p-2 rounded-lg transition-all duration-300 ${
                     industriesOpen ? "opacity-100 visible" : "opacity-0 invisible"
                   }`}
                 >
@@ -94,7 +388,9 @@ export default function Header() {
                 <button
                   onClick={() => setSolutionsOpen(!solutionsOpen)}
                   className="flex justify-between w-full px-2 py-2 hover:bg-gray-700 rounded"
-                >
+               
+                  
+               >
                   Services & Solutions <ChevronRight size={16} />
                 </button>
 
