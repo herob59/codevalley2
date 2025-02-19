@@ -26,7 +26,7 @@ export default function Header() {
     <div className="container mx-auto flex justify-between items-center p-4">
       {/* Logo */}
       <div className="text-xl font-bold">
-        <img src='assets/hit.png' alt='hit' />
+       <Link href="/" > <img src='assets/hit.png' alt='hit' /></Link>
       </div>
 
       {/* Desktop Navigation */}
