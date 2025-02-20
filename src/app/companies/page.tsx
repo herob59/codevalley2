@@ -1,7 +1,7 @@
 import Header from '@/components/Header'
 import React from 'react'
 
-export default function Products() {
+export default function Companies () {
   return (
    <Header />
   )
