@@ -20,9 +20,11 @@ import {
         
         {/* Heading and Paragraph Section */}
         <div className="w-full max-w-4xl text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold uppercase">
-            Services and Solutions We Offer
+          <div className="border w-full bg-blue-400 py-6">
+          <h2 className="text-3xl md:text-3xl font-bold uppercase">
+            Services and Solutions We Offer :
           </h2>
+          </div>
           <p className="text-lg text-black  mt-4">
             CodeValley technology provides a wide range of software development services and solutions. 
             We also design and implement software products for companies to propel their business forward.
