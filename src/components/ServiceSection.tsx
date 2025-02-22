@@ -20,7 +20,7 @@ import {
         
         {/* Heading and Paragraph Section */}
         <div className="w-full max-w-4xl text-center mb-12">
-          <div className="border w-full bg-blue-400 py-6">
+          <div className="border rounded-3xl shadow-3xl w-full bg-blue-400 py-6">
           <h2 className="text-3xl md:text-3xl font-bold uppercase">
             Services and Solutions We Offer :
           </h2>
