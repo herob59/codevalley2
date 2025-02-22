@@ -7,6 +7,7 @@ import ServiceSection from "@/components/ServiceSection";
 import  './globals.css'
 import TeamSection from "@/components/TeamSection";
 import AboutUsSection from "@/components/AboutUsSection";
+import ArticleSection from "@/components/ArticleSection";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
        <HeroSection/> 
        <AboutUsSection /> 
        <ServiceSection />
+        <ArticleSection />
         <CounterSection /> 
         <TeamSection />
         <ContactSection />
