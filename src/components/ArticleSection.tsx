@@ -33,14 +33,7 @@ export default function ArticleSection() {
                             In industries like manufacturing, AI-powered robots can work alongside humans, handling repetitive or dangerous tasks, thus increasing productivity and safety.
                             </p>
 
-                            <ul className="flex flex-wrap items-center justify-start text-sm gap-2">
-                                <li title="Pricing type"
-                                    className="flex items-center cursor-pointer gap-0.5 bg-gray-100 text-black px-2 py-0.5 rounded-full">
-                                   
-                                    
-                                </li>
-
-                            </ul>
+                 
 
                             <ul className="flex flex-wrap text-sm gap-2 my-1">
                                 <li className="flex items-center gap-2">

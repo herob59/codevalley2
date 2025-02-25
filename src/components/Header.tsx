@@ -236,7 +236,7 @@ export default function Header() {
                   <Link href="/about" className="block text-white">About</Link>
                 </li>
                 <li className="py-2 border-b border-gray-700">
-                  <Link href="/products" className="block text-white">Products</Link>
+                  <Link href="/companies" className="block text-white">Companies</Link>
                 </li>
                 <li className="py-2 border-b border-gray-700 ">
                   <Link href="/services" className=" text-white flex ">
