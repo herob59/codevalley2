@@ -33,7 +33,7 @@ export default function About() {
     <div className="w-full max-w-7xl px-4 mx-auto sm:px-8 mt-24 py-10">
     <blockquote className="relative grid items-center bg-white shadow-xl md:grid-cols-3 rounded-xl">
         
-        <img className="hidden object-cover object-fit w-full h-full rounded-l-xl md:block " style={{clipPath: "polygon(0 0%, 100% 0%, 75% 100%, 0% 100%"}}  src="/teamlead.jpg" />
+        <img className="hidden object-cover  w-full h-full rounded-l-xl md:block " style={{clipPath: "polygon(0 0%, 100% 0%, 75% 100%, 0% 100%"}}  src="assets/tiktok.jpg" alt="tiktok" />
 
         <article className="relative p-6 md:p-8 md:col-span-2">
             <svg className="absolute top-0 right-0 hidden w-24 h-24 -mt-12 -mr-12 text-primary-600 md:block" width="256"
@@ -53,7 +53,7 @@ export default function About() {
                 </p>
 
                 <div className="flex items-center space-x-4 md:space-x-0">
-                    <img className="w-12 h-12 rounded-full md:hidden" src="/team1.jpg " alt="teamlead"/>
+                    <img className="w-12 h-12 rounded-full md:hidden" src="/team1.jpg " alt="team1"/>
                     <span className="font-bold text-lg">Eboge Henry</span>
                 </div>
             </div>
