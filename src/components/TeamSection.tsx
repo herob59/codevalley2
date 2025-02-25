@@ -4,7 +4,7 @@ const teamMembers = [
   {
     name: "Eboge Henry",
     title: "CEO & Founder",
-    image: "/assets/team1.jpg",
+    image: "/team1.jpg",
     social: {
       facebook: "#",
       instagram: "#",

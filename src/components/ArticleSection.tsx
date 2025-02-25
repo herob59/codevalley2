@@ -3,7 +3,7 @@ import React from 'react'
 export default function ArticleSection() {
   return (
 
-        <>
+        <section className=''>
                 <div className="max-w-7xl mx-auto my-8 px-2">
                 
                 <div className="flex justify-center text-2xl md:text-3xl font-bold mb-4">
@@ -281,6 +281,6 @@ export default function ArticleSection() {
                 </ul>
 
             </div>
-     </>
+     </section>
   )
 }
