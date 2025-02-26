@@ -37,7 +37,7 @@ export default function About() {
         {/* Image for large screens */}
         <div className="hidden md:block w-1/3">
           <img
-            src="/tiktok.jpg" // Change to your image path
+           src="/team1.jpg" // Change to your image path
             alt="Eboge Henry"
             className="w-full h-auto rounded-lg"
             style={{ clipPath: "polygon(0 0, 100% 0, 75% 100%, 0% 100%)" }}
