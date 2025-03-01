@@ -189,7 +189,9 @@ export default function Header() {
                                    
                                   </ul>
                                 </li>
-                  
+                                <li>
+                                <Link href="/academy" className="hover:text-gray-400">Academy</Link>
+                              </li>
                   
                               <li>
                                 <Link href="/contact" className="hover:text-gray-400">Contact</Link>
