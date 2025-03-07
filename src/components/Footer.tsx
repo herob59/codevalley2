@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="flex flex-col items-center md:items-start">
           <h3 className="text-lg font-semibold uppercase mb-4">Site Map</h3>
           <nav className="flex flex-col space-y-2 text-gray-300">
-            {["Home", "About", "Product", "Service", "Contact"].map((item, index) => (
+            {["Home", "About", "Product", "Service", "Academy", "Contact"].map((item, index) => (
               <a key={index} href={`/${item.toLowerCase()}`} className="hover:text-blue-400">
                 {item}
               </a>
